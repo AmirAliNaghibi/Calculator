@@ -21,10 +21,19 @@ class MainActivity : AppCompatActivity() {
 
     fun onDigitClicked(view: View){
         val clickedButton = view as Button
-        if (!textViewInput.text.contains("²") && !textViewInput.text.contains("|") && !textViewInput.text.contains("!")/* && !textViewInput.text.contains("^") */) {
-        textViewInput.append(clickedButton.text)
 
-            isLastInputNumber = true
+
+        if (!textViewInput.text.contains("²") && !textViewInput.text.contains("|") && !textViewInput.text.contains("!")/* && !textViewInput.text.contains("^") */) {
+            if (clickedButton.text == "π"){
+                textViewInput.text = "3.14159"
+                hasDotInTextView = true
+                isLastInputNumber = true
+            }
+            else {
+                textViewInput.append(clickedButton.text)
+
+                isLastInputNumber = true
+            }
        }
 
 

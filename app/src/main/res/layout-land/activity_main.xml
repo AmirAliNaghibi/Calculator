@@ -326,6 +326,7 @@
                         android:layout_margin="8dp"
                         android:layout_weight="1"
                         android:background="@drawable/button_style"
+                        android:onClick="onDigitClicked"
                         android:shadowColor="@color/black"
                         android:text="@string/p"
                         android:textAlignment="center"
